@@ -1,1 +1,2 @@
-# Foodeater
+# MatterJSBoilerPlate
+MatterJSBoilerPlate
