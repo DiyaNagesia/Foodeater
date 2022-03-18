@@ -75,17 +75,17 @@ function draw(){
       spawnObstacles()
 	 for (var d = 0; d < obstacle1Group.length; d++) {
 		if (obstacle1Group.get(d).isTouching(shark)) {
-			score = score-1
+			score = 0
 		}
 	}
 	for (var e = 0; e < obstacle2Group.length; e++) {
 	if (obstacle2Group.get(e).isTouching(shark)) {
-		score = score-1
+		score = 0
 		}
 	}
 	for (var f = 0; f < obstacle3Group.length; f++) {
 		if (obstacle3Group.get(f).isTouching(shark)) {
-			score = score-1
+			score = 0
 		}
 	}
 
@@ -116,11 +116,12 @@ for (var i = 0; i < lFGroup.length; i++) {
 		}
 	}
 
-	if(score===20){
+		if(score>20){
 		gameState = "won"
         textSize(150)
   fill("blue")
-  text("You Won ",windowWidth/2,windowHeight/2)
+  text("You Won 😃",windowWidth/4,windowHeight/2)
+  score = 20
   dotGroup.destroyEach();
   sFGroup.destroyEach();
   mFGroup.destroyEach();
