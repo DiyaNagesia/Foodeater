@@ -116,7 +116,7 @@ for (var i = 0; i < lFGroup.length; i++) {
 		}
 	}
 
-		if(score>20){
+	if(score>20){
 		gameState = "won"
         textSize(150)
   fill("blue")
@@ -147,7 +147,7 @@ for (var i = 0; i < lFGroup.length; i++) {
 
 
 function spawnDot(){
-	if(frameCount % 25 === 0){
+	if(frameCount % 20 === 0){
 		var dot = createSprite(windowWidth,Math.round(random(20,windowHeight-60)))
 		 
 	dot.addImage(gDot)
@@ -159,7 +159,7 @@ function spawnDot(){
 }
 
 function spawnFood(){
-	if(frameCount % 45 === 0){
+	if(frameCount % 50 === 0){
 		var sF = createSprite(windowWidth,Math.round(random(20,windowHeight-60)))
 		var mF = createSprite(windowWidth,Math.round(random(20,windowHeight-60)))
 		var lF = createSprite(windowWidth,Math.round(random(20,windowHeight-60)))
