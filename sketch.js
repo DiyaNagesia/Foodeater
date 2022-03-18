@@ -120,7 +120,7 @@ for (var i = 0; i < lFGroup.length; i++) {
 		gameState = "won"
         textSize(150)
   fill("blue")
-  text("You Won 😃",windowWidth/4,windowHeight/2)
+  text("You Win !!",windowWidth/4,windowHeight/2)
   score = 20
   dotGroup.destroyEach();
   sFGroup.destroyEach();
