@@ -116,33 +116,23 @@ for (var i = 0; i < lFGroup.length; i++) {
 		}
 	}
 
-	if(score>20){
+		if(score>20){
 		gameState = "won"
-        textSize(150)
-  fill("blue")
-  text("You Win !!",windowWidth/4,windowHeight/2)
-  score = 20
-  dotGroup.destroyEach();
-  sFGroup.destroyEach();
-  mFGroup.destroyEach();
-  lFGroup.destroyEach();
-  obstacle1Group.destroyEach();
-  obstacle2Group.destroyEach();
-  obstacle3Group.destroy();
-  shark.destroy();
-  score.destroy();
+       
 	  }
 	  
-	   if(gameState === "lost"){
 
-		   if(shark.isTouching(obstacle1Group)){
-		   }
-		   if(shark.isTouching(obstacle2Group)){
-		   }
-		   if(shark.isTouching(obstacle3Group)){
+		  if(shark.isTouching(obstacle1Group)){
+			  gameState = "lost"
+		  }
+		  if(shark.isTouching(obstacle2Group)){
+			gameState = "lost"
 		}
-	   }
-	}
+		if(shark.isTouching(obstacle3Group)){
+			gameState = "lost"
+		}
+	  
+}
 	drawSprites()
 
 
@@ -208,31 +198,32 @@ function spawnObstacles(){
 
 }
 
-if(gameState == "won"){
-    textSize(100)
-  fill("yellow")
-  text("You Won ",windowWidth/2,windowHeight/2)
+
+if(gameState === "won"){
+    textSize(150)
+  fill("green")
+  text("You Won ",windowWidth/4,windowHeight/2)
   dotGroup.destroyEach();
   sFGroup.destroyEach();
   mFGroup.destroyEach();
   lFGroup.destroyEach();
   obstacle1Group.destroyEach();
   obstacle2Group.destroyEach();
-  obstacle3Group.destroy();
+  obstacle3Group.destroyEach();
   shark.destroy();
 }
 
-else if(gameState == "lost"){
-	textSize(100)
+else if(gameState === "lost"){
+	textSize(150)
   fill("red")
-  text("You lost ",windowWidth/2,windowHeight/2)
+  text("You lose ",windowWidth/4,windowHeight/2)
   dotGroup.destroyEach();
   sFGroup.destroyEach();
   mFGroup.destroyEach();
   lFGroup.destroyEach();
   obstacle1Group.destroyEach();
   obstacle2Group.destroyEach();
-  obstacle3Group.destroy();
+  obstacle3Group.destroyEach();
   shark.destroy();
 }
 }
