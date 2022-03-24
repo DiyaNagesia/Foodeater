@@ -116,7 +116,7 @@ for (var i = 0; i < lFGroup.length; i++) {
 		}
 	}
 
-		if(score>20){
+		if(score===20){
 		gameState = "won"
        
 	  }
